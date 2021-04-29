@@ -138,5 +138,11 @@ namespace StayBeautifulSMS
             itemsGridView.EditIndex = -1;
             this.BindGrid();
         }
+
+        protected void itemsGridView_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            itemsGridView.EditIndex = e.NewEditIndex;
+            this.BindGrid();
+        }
     }
 }

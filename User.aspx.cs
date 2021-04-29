@@ -34,7 +34,7 @@ namespace StayBeautifulSMS
             OleDbConnection con = new OleDbConnection(constr);
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = @"SELECT user_Id, user_address ""User Address"",User_Name ""User Name"", user_contact ""User Contact"", user_email ""User Email"", user_username ""User Username"" ,user_type ""User Type"" FROM [App Dev CW2].[dbo].[User]";
+            cmd.CommandText = @"SELECT user_Id, user_address ""User Address"",User_Name ""User Name"", user_contact ""User Contact"", user_email ""User Email"", user_username ""User Username"", user_password ""Password"", user_type ""User Type"" FROM [App Dev CW2].[dbo].[User]";
             cmd.CommandType = CommandType.Text;
             DataTable dt = new DataTable();
             using (OleDbDataReader sdr = cmd.ExecuteReader())
@@ -75,12 +75,13 @@ namespace StayBeautifulSMS
             string contact = (row.Cells[4].Controls[0] as TextBox).Text;
             string email = (row.Cells[5].Controls[0] as TextBox).Text;
             string username = (row.Cells[6].Controls[0] as TextBox).Text;
-            string type = (row.Cells[7].Controls[0] as TextBox).Text;
+            string password = (row.Cells[7].Controls[0] as TextBox).Text;
+            string type = (row.Cells[8].Controls[0] as TextBox).Text;
             string constr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (OleDbConnection con = new OleDbConnection(constr))
             {
-                using (OleDbCommand cmd = new OleDbCommand("Update [App Dev CW2].[dbo].[User] SET user_name = '" + name + "',user_address='"+address+ "',user_username='" + username + "',user_contact='" +contact + "',user_email='" + email + "',user_type='" + type + "' where user_id = " + ID))
+                using (OleDbCommand cmd = new OleDbCommand("Update [App Dev CW2].[dbo].[User] SET user_name = '" + name + "',user_address='"+address+ "',user_username='" + username + "',user_contact='" +contact + "',user_email='" + email + "', user_password='" + password + "', user_type='" + type + "' where user_id = " + ID))
                 {
                     cmd.Connection = con;
                     con.Open();

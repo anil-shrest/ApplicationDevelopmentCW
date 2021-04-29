@@ -44,6 +44,9 @@ textarea {
     max-width: 280px;
 }
 
+.billBody{
+    color:aquamarine;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

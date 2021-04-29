@@ -59,7 +59,7 @@
             <asp:TextBox ID="txtUserEmail" Height="25px" runat="server" Width="300px" class="textFields" placeholder="Email"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtUserEmail" ErrorMessage="Field must not be empty!" ForeColor="Red" ValidationGroup="UserGroup"></asp:RequiredFieldValidator>
         </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtUserEmail" ErrorMessage="Takes string value only!" ForeColor="Red" ValidationGroup="UserGroup" ValidationExpression="\s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtUserEmail" ErrorMessage="Invalid email address!" ForeColor="Red" ValidationGroup="UserGroup" ValidationExpression="\s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*"></asp:RegularExpressionValidator>
         <br />
         <div>
             <%--<asp:Label runat="server" class="labels" ID="Label8" Font-Bold="True" Text="User Password"></asp:Label>--%>

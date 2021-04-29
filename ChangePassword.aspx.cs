@@ -45,11 +45,9 @@ namespace StayBeautifulSMS
                             cmd2.ExecuteNonQuery();
                             con.Close();
                         }
-                        string script = "alert(\"Password updated successfully\"); ";
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "ConfirmSubmit", script);
+                        string script = "alert('Password successfully changed'); ";
+                        ScriptManager.RegisterStartupScript(this.Page, GetType(), "ClosePopup", script, true);
 
-                        ClientScript.RegisterOnSubmitStatement(this.GetType(),
-                                              "ConfirmSubmit", script);
                         System.Diagnostics.Debug.WriteLine("Item quantity specified not available.");
                     }
                     else

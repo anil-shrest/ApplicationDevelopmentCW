@@ -108,6 +108,7 @@
     <Content Include="About.aspx" />
     <Content Include="Assets\avatar.svg" />
     <Content Include="Assets\bg.jpg" />
+    <Content Include="Assets\bg.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\facebook.png" />
     <Content Include="Assets\hello.svg" />

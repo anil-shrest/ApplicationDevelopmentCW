@@ -86,7 +86,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 30px 0 30px;
     border-bottom: 1px solid lightgray;
 }
@@ -199,7 +199,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .charts__left {
@@ -374,9 +374,9 @@ main {
 
 .sidebar__link {
     color: #f3f4f6;
-    padding: 10px;
+    padding: 8px;
     border-radius: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .active_menu_link {

@@ -38,18 +38,19 @@
     width: 12rem;
     height: 50px !important;
 }
+
+.billBody {
+padding: 20px;
 }
-
-
-    /*------------------hover effect on submit button-----------------------*/
+/*------------------hover effect on submit button-----------------------*/
 .submit-button:hover, .cancel-button:hover {
-        /*background-color: #fd758c;*/
-        border: none;
-        /*color: white;*/
-        opacity: 0.5;
-        box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
-        transition: 0.2s ease-in-out;
-    }
+    /*background-color: #fd758c;*/
+    border: none;
+    /*color: white;*/
+    opacity: 0.5;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
+}
 
 .cancel-button {
     background-color: #ea6060;

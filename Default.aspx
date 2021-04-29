@@ -8,17 +8,13 @@
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
                 <div class="navbar__left">
-                    <a href="#">Subscribers</a>
-                    <a href="#">Video Management</a>
-                    <a class="active_link" href="#">Admin</a>
-                </div>
-                <div class="navbar__right">
-                    <a href="#">
+      <%--              <a href="#">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
                     <a href="#">
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    </a>
+                    </a>--%>
+                     <span class="font-bold text-title" id="username" runat="server"></span>
                     <a href="#">
                         <img width="30" src="assets/avatar.svg" alt="" />
                         <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
@@ -35,7 +31,7 @@
                         <div class="main__greeting">
                             <h1>Stay Beautiful Management System</h1>
                             <p>Admin Dashboard</p>
-                            
+
                         </div>
                     </div>
 
@@ -77,7 +73,7 @@
                                 aria-hidden="true"></i>
                             <div class="card_inner">
                                 <p class="text-primary-p">Number of purchases</p>
-                                <span class="font-bold text-title" id ="purchases" runat="server"></span>
+                                <span class="font-bold text-title" id="purchases" runat="server"></span>
                             </div>
                         </div>
                     </div>
@@ -86,45 +82,46 @@
                     <!-- CHARTS STARTS HERE -->
                     <div class="charts">
                         <div class="charts__left">
-                            <div class="charts__left__title">
+                            <img src="Assets/bg.png" style="width: 620px; object-fit: contain;"
+                                alt="Background">
+                            <%--                            <div class="charts__left__title">
                                 <div>
                                     <h1>Daily Reports</h1>
                                     <p>Cupertino, California, USA</p>
                                 </div>
                                 <i class="fa fa-usd" aria-hidden="true"></i>
                             </div>
-                            <div id="apex1"></div>
+                            <div id="apex1"></div>--%>
                         </div>
 
                         <div class="charts__right">
                             <div class="charts__right__title">
                                 <div>
-                                    <h1>Stats Reports</h1>
-                                    <p>Cupertino, California, USA</p>
+                                    <h1>Details</h1>
                                 </div>
                                 <i class="fa fa-usd" aria-hidden="true"></i>
                             </div>
 
                             <div class="charts__right__cards">
                                 <div class="card1">
-                                   <h1>Brands</h1>
-                                    
-                               
+                                    <h3>Categories</h3>
+                                    <span class="font-bold text-title" style="font-size:2em" id="totalCategories" runat="server"></span>
+
                                 </div>
 
                                 <div class="card2">
-                                    <h1>Items</h1>
-                                    <p runat="server"></p>
+                                    <h3>Low In Stock</h3>
+                                    <span class="font-bold text-title" style="font-size:2em" id="lowStock" runat="server"></span>
                                 </div>
 
                                 <div class="card3">
-                                        <h1>Purchases</h1>
-                                    
+                                    <h3>Inactive Customers</h3>
+                                    <span class="font-bold text-title" style="font-size:2em" id="inactiveCustomer" runat="server"></span>
                                 </div>
 
                                 <div class="card4">
-                                   <h1>Customers</h1>
-                                    
+                                    <h3>Unsold Stock</h3>
+                                    <span class="font-bold text-title" style="font-size:2em" id="unsoldStock" runat="server"></span>
                                 </div>
                             </div>
                         </div>
@@ -138,8 +135,8 @@
 
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script src="Scripts/dashboard.js"></script>
-       
+
     </div>
-    
+
     <%--</html>--%>
 </asp:Content>
